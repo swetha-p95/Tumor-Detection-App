@@ -27,7 +27,11 @@ def make_prediction(img,model):
     return res
 
 file = download_model_from_github("https://github.com/swetha-p95/Tumor-Detection-App/raw/main/cnn_tumor.h5")
-model = tf.keras.models.load_model(file)
+with tempfile.NamedTemporaryFile(suffix=".h5", delete=False) as temp_file:
+    temp_file.write(file.getbuffer())
+    temp_file_path = temp_file.name
+
+model = tf.keras.models.load_model(temp_file_path)
 
 st.title("Tumour Detetction App")
 
