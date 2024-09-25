@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 from io import BytesIO
 import requests
+import tempfile
 
 
 #model = tf.keras.models.load_model('cnn_tumor.h5')
