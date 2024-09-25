@@ -3,7 +3,7 @@ from PIL import Image
 import tensorflow as tf
 import numpy as np
 
-model = tf.keras.models.load_model('C:\\Users\\swe\\Desktop\\S3\\DeepLearning\\git_folder\\deep-learning\\CNN\\tumor_detection\\results\\cnn_tumor.h5')
+model = tf.keras.models.load_model('cnn_tumor.h5')
 
 def make_prediction(img,model):
     # img=cv2.imread(img)
