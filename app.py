@@ -27,7 +27,7 @@ def make_prediction(img,model):
     return res
 
 file = download_model_from_github("https://github.com/swetha-p95/Tumor-Detection-App/blob/main/cnn_tumor.h5")
-model = load_model(file)
+model = tf.keras.models.load_model(file)
 
 st.title("Tumour Detetction App")
 
